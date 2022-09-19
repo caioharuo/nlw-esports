@@ -66,7 +66,9 @@ export function Game() {
           horizontal
           style={styles.containerList}
           contentContainerStyle={[
-            duos?.length > 0 ? styles.contentList : styles.emptyListContent,
+            duos && duos.length > 0
+              ? styles.contentList
+              : styles.emptyListContent,
           ]}
           showsHorizontalScrollIndicator={false}
           ListEmptyComponent={() => (
